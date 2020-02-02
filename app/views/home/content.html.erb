@@ -1,0 +1,14 @@
+<a> No.<%=@post.id%> memory </a> <br>
+
+Title: <%= @post.title%> <br>
+Date: <%= @post.date%> <br>
+Writer: <%= @post.writer%> <br>
+Content: <%= @post.content%> <br>
+
+<form action="/read" method="get">
+    <input type="submit" value="read more">
+</form>
+
+<form action="/" method="get">
+    <input type="submit" value="Good bye Riddle">
+</form>
