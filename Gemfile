@@ -68,6 +68,3 @@ gem "letter_opener", :group => :development # 이메일 발송 관련 젬
 
 gem 'minitest', '5.10.3'
 gem 'sqlite3', group: :development
-
-
-ruby 2.5.0p0
