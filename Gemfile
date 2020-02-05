@@ -5,6 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'sprockets-rails', '2.3.3'
 # Bundle edge Rails instead: gem 'rails, github: 'rails/rails'
 gem 'rails', '~> 5.0.7'
 # Use sqlite3 as the database for Active Record
@@ -67,3 +68,6 @@ gem "letter_opener", :group => :development # 이메일 발송 관련 젬
 gem 'minitest', '5.10.3'
 
 ruby '2.5.0'
+
+gem 'omniauth-kakao'
+gem 'figaro'

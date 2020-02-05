@@ -10,6 +10,8 @@ Devise.setup do |config|
   # by default. You can change it below and use your own secret key.
   # config.secret_key = '47946e139e1bdcdea3b7edcbdd75220466aba9994c85493111c7bb3b6950551496dbcbe2b24bf7c83c05f26adec753cf860b3831bbaff6837f390de0a307f407'
 
+  config.omniauth :kakao, ENV["KAKAO_CLIENT_ID"]
+  
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
   # config.parent_controller = 'DeviseController'

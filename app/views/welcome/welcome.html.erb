@@ -1,0 +1,137 @@
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>테스트페이지</title>
+  <meta name ="viewport" content="width=device-width,initial-scale=1.0">
+  <%= stylesheet_link_tag    "reset", :media => "screen" %>
+  <%= stylesheet_link_tag    "welcome", :media => "screen" %>
+  <%= javascript_include_tag "jquery-3.2.1.min.js" %>
+<!--  <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/reset.css" media="screen">-->
+<!--  <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/welcome.css" media="screen">-->
+<!--  <script src="javascripts/jquery-3.2.1.min.js"></script>-->
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <!--script-->
+
+
+</head>
+
+<body>
+
+<div id="wrap">
+  <header>
+    <div class="head">
+      <h1><a href="/">광주파스텔스튜디오</a></h1>
+      <div href="/login">
+        <a class="profile">
+          <% if user_signed_in? %>
+            <p>현재 로그인된 유저의 이메일 : <%= current_user.email %></p>
+            <p><%= link_to "로그아웃", destroy_user_session_path, method: :DELETE, data: { confirm: "Are you sure?" } %></p>
+          <% else %>
+            <p><%= link_to "로그인", new_user_session_path %></p>
+          <% end %>
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <div class="content01">
+    <img src="/assets/title-img-02.png">
+    <p>꽝 없는 이벤트! <br> 100%로 당첨입니다!<br>룰렛을 돌려 혜택을 받아보세요.</p>
+    <button id="btn" class="event">참여하기</button>
+    <span> 이용약관 | 개인정보처리방침</span>
+  </div>
+
+  <div class="content02">
+    <div>
+      <ul>
+        <li class="title">예약 및 문의</li>
+        <li class="btn02" ><a href="#"><img src="/assets/kakao01.png"></a></li>
+      </ul>
+
+      <p>상담원 연결 가능 시간: 10:00~19:00(주말제외)</p></div>
+  </div>
+
+
+  <!--modal-->
+  <div id="eventResult" class="modal">
+    <!--modal content-->
+    <div class="modal_content">
+      <section>
+        <!--닫기-->
+        <span class="close"><img src="/assets/close.png"></span>
+        <h3>이벤트 결과</h3>
+
+        <!--모달내용-->
+        <div class="contents">
+          <img src="/assets/party.png">
+          <h4><strong>당첨코드 :</strong>ZEGWBE12</h4>
+          <p>축하드립니다</p>
+
+          <ul>
+            <li class="copy"><a href="#">복사하기</a></li>
+            <li><a href="index.html.erb">확인했어요</a></li>
+          </ul></div>
+      </section>
+    </div>
+  </div>
+
+
+
+  <footer>
+    <div class="foot">
+      광주파스텔스튜디오(상호) 203-36-93150(사업자등록번호) | 방혜주(대표자)
+
+      주소: 서울특별시 성북구 안암로145 고려대학교서울캠퍼스 Startup Station 218호
+
+      영업시간: 오전 10시 ~ 오후 6시
+
+      연락처: 010-5892-7898 (오전 10시 ~ 오후 8시)
+    </div>
+    <span>
+					이용약관  |   개인정보처리방침   |   카톡챗봇
+				</span>
+  </footer>
+</div>
+
+
+
+<script>
+    //get the modal
+    var modal = document.getElementById("eventResult");
+    // Get the button that opens the modal
+    var btn = document.getElementById("btn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    // When the user clicks on the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    //when the user clicks on <span>(x), close the modal
+    span.onclick = function(){
+        modal.style.display="none";
+    }
+    //when the user clicks anywhere outside of the modal, close it.
+    window.onClick = function(event){
+        if(event.target == modal){
+            modal.style.display ="none";
+        }
+    }
+
+
+
+</script>
+
+
+
+
+
+</body>
+
+
+
+
+</html>

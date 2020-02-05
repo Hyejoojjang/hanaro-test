@@ -1,20 +1,80 @@
-<h2>Log in</h2>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>chassie</title>
+  <meta name ="viewport" content="width=device-width,initial-scale=1.0">
+  <%= stylesheet_link_tag    "reset", :media => "screen" %>
+  <%= stylesheet_link_tag    "login", :media => "screen" %>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<div id="wrap">
+  <header>
+    <div class="head">
+      <h1><a href="/">광주파스텔스튜디오</a></h1>
+      <a href="login.html"><p>로그인</p></a>
+    </div>
+
+  </header>
+
+
+  <div class="content01">
+    <h1>로그인</h1>
+    <ul>
+      <li><a href="#"><img src="/assets/kakaologin.png"></a></li>
+      <li><p>다른 로그인은 지원하지 않습니다.</p></li>
+    </ul>
+
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
+  <div>
+    <hr class="line">
 
-<%= render "devise/shared/links" %>
+  </div>
+
+  <div class="content02">
+    <h1>회원가입</h1>
+    <ul>
+      <li><p>계정이 없으신가요?<br>쉽고 빠른 가입은 아래 버튼을 클릭해주세요.</p></li>
+      <li><a href="#"><img src="/assets/kakaosignup.png"></a></li></ul>
+
+  </div>
+
+
+
+  <footer>
+    <div class="foot">
+      광주파스텔스튜디오(상호) 203-36-93150(사업자등록번호) | 방혜주(대표자)
+
+      주소: 서울특별시 성북구 안암로145 고려대학교서울캠퍼스 Startup Station 218호
+
+      영업시간: 오전 10시 ~ 오후 6시
+
+      연락처: 010-5892-7898 (오전 10시 ~ 오후 8시)
+
+    </div>
+
+    <span>
+					이용약관  |   개인정보처리방침   |   카톡챗봇
+				</span>
+
+  </footer>
+
+
+</div>
+
+
+
+
+</body>
+
+
+
+
+</html>
