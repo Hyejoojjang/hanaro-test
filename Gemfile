@@ -9,7 +9,7 @@ gem 'sprockets-rails', '2.3.3'
 # Bundle edge Rails instead: gem 'rails, github: 'rails/rails'
 gem 'rails', '~> 5.0.7'
 
-gem 'sqlite3'
+gem 'sqlite3', '~> 1.3.11'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
@@ -69,7 +69,7 @@ gem "letter_opener", :group => :development # 이메일 발송 관련 젬
 
 gem 'minitest', '5.10.3'
 
-ruby '2.5.0'
+# ruby '2.5.0'
 
 gem 'omniauth-kakao'
 gem 'figaro'
