@@ -9,7 +9,7 @@ gem 'sprockets-rails', '2.3.3'
 # Bundle edge Rails instead: gem 'rails, github: 'rails/rails'
 gem 'rails', '~> 5.0.7'
 
-gem 'sqlite3', group: :development
+gem 'sqlite3'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
@@ -32,11 +32,12 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-gem 'pg', '~> 1.2.2'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'rails_12factor', group: :production
+#
+#gem 'pg', group: :production
+#gem 'rails_12factor', group: :production
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
