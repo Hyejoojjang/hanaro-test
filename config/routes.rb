@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   match '/profile/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup_
   get 'welcome/menu' => 'welcome#menu', :as => :welcome_menu
   get 'welcome/event' => 'welcome#event', :as => :welcome_event
-  post 'devise/confirmations/new' => 'devise#confirmations#new', :as => :log_in
   get 'welcome/mypage' => 'welcome#mypage', :as => :mypage
+  get '/auth/kakao/callback' => 'welcome#welcome'
 
 end

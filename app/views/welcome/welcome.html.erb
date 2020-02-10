@@ -27,7 +27,7 @@
             <p>id : <%= current_user.email %></p>
             <p><%= link_to "로그아웃", destroy_user_session_path, method: :DELETE, data: { confirm: "Are you sure?" } %></p>
           <% else %>
-            <p><%= link_to "로그인", log_in %></p>
+            <p><%= link_to "로그인", new_user_session_path%></p>
           <% end %>
         </a>
     </div>
