@@ -20,6 +20,24 @@ test:
   <<: *default
   database: db/test.sqlite3
 
-production:
-  <<: *default
-  database: db/production.sqlite3
+#production:
+#  <<: *default
+#      database: db/production.sqlite3
+
+#development:
+#  adapter: postgresql
+#  encoding: unicode
+#  database: hanaro_development
+#  pool: 5
+#  username: heyjdu
+#  password:
+#  timeout: 5000
+
+#  test:
+#  adapter: postgresql
+#  encoding: unicode
+#  database: hanaro_test
+#  pool: 5
+#  username: dave
+#  password:
+#  timeout: 5000
