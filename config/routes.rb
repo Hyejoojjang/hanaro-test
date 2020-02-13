@@ -8,5 +8,6 @@ Rails.application.routes.draw do
   get 'welcome/event' => 'welcome#event', :as => :welcome_event
   get 'welcome/mypage' => 'welcome#mypage', :as => :mypage
   get '/auth/kakao/callback' => 'welcome#welcome'
+  get 'users/sign_in' => 'users#sign_in', :as => :new_users_session_path
 
 end
