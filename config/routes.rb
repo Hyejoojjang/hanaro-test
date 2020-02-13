@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   get 'welcome/event' => 'welcome#event', :as => :welcome_event
   get 'welcome/mypage' => 'welcome#mypage', :as => :mypage
   get '/auth/kakao/callback' => 'welcome#welcome'
+  get 'welcome/login' => 'welcome#login'
 
 end
