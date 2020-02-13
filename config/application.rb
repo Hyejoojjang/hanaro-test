@@ -6,10 +6,10 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, :assets, Rails.env)
 
-# Enable the asset pipeline
-config.assets.enabled = true
-# Version of your assets, change this if you want to expire all your assets
-config.assets.version = '1.0'
+## Enable the asset pipeline
+#config.assets.enabled = true
+## Version of your assets, change this if you want to expire all your assets
+#config.assets.version = '1.0'
 
 module Hanaro
   class Application < Rails::Application
