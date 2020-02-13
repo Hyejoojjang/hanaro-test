@@ -24,7 +24,7 @@ Rails.application.configure do
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   APPLICATIONNAME::Application.configure do
-    config.assets.compile = true
+    config.assets.compile = false
   end
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
