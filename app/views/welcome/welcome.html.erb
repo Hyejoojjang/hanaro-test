@@ -4,10 +4,12 @@
   <meta charset="utf-8">
   <title>테스트페이지</title>
   <meta name ="viewport" content="width=device-width,initial-scale=1.0">
-  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag    "reset", :media => "screen" %>
-  <%= stylesheet_link_tag    "welcome", :media => "screen" %>
-  <%= javascript_include_tag "jquery-3.2.1.min.js" %>
+  <%#= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" type="text/css" href="assets/application.css" media="all">
+  <link rel="stylesheet" type="text/css" href="assets/reset.css" media="screen">
+  <link rel="stylesheet" type="text/css" href="assets/welcome.css" media="screen">
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <%#= javascript_include_tag "jquery-3.2.1.min.js" %>
 
 <!--  <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/reset.css" media="screen">-->
 <!--  <link rel="stylesheet" type="text/css" href="app/assets/stylesheets/welcome.css" media="screen">-->
