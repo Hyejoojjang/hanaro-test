@@ -28,6 +28,8 @@ Rails.application.configure do
   #config.assets.initialize_on_precompile = false
   # Add Rails Admin assets (required)
   config.assets.precompile += ['rails_admin/rails_admin.css', 'rails_admin/rails_admin.js']
+  config.assets.precompile += ['static_pages.css']
+
   config.assets.digest = true  #To access assets which are precompiled and in their names have appendend digets by rails
   config.cache_classes = true #allowing caching assets
 
