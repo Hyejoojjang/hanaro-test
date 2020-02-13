@@ -25,9 +25,9 @@ Rails.application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   # Prevent initializing the application before assets are precompiled (required for heroku)
   config.assets.compile = false
-  config.assets.initialize_on_precompile = false
+  #config.assets.initialize_on_precompile = false
   # Add Rails Admin assets (required)
-  config.assets.precompile += ['rails_admin/rails_admin.css', 'rails_admin/rails_admin.js']
+  #config.assets.precompile += ['rails_admin/rails_admin.css', 'rails_admin/rails_admin.js']
   config.assets.digest = true  #To access assets which are precompiled and in their names have appendend digets by rails
   config.cache_classes = true #allowing caching assets
 
