@@ -49,3 +49,7 @@ class AddDeviseToUsers < ActiveRecord::Migration[5.0]
     raise ActiveRecord::IrreversibleMigration
   end
 end
+
+#PG::UndefinedTable: ERROR: relation "users" does not exist LINE 8:
+#    WHERE a.attrelid = '"users"'::regclass ^ :
+#    SELECT a.attname, format_type(a.atttypid, a.atttypmod), pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod, (SELECT c.collname FROM pg_collation c, pg_type t WHERE c.oid = a.attcollation AND t.oid = a.atttypid AND a.attcollation <> t.typcollation), col_description(a.attrelid, a.attnum) AS comment FROM pg_attribute a LEFT JOIN pg_attrdef d ON a.attrelid = d.adrelid AND a.attnum = d.adnum WHERE a.attrelid = '"users"'::regclass AND a.attnum > 0 AND NOT a.attisdropped ORDER BY a.attnum
